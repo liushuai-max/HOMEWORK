@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>知识点查看</title>
+</head>
+<body style="text-align:center">
+<br>
+<h2>知识点查看页面</h2>
+<div>
+    <br>
+    <form action="/login" method="post">
+        <label for="">知识点</label>
+        <input type="text" name="point">
+
+        <input type="submit" value="查看">
+    </form>
+    <h2 th:utext="${msg2}"></h2>
+</div>
+<div>
+    <br>
+    <form action="/deleteuser" method="post">
+        <label for="">知识点</label>
+        <input type="text" name="point">
+
+        <input type="submit" value="删除">
+    </form>
+    <h2 th:utext="${msg3}"></h2>
+</div>
+
+<div>
+    <br>
+    <form action="/updateuser" method="post">
+        <label for="">知识点</label>
+        <br>
+        <input type="text" name="point">
+        <br>
+        <label for="">详细说明</label>
+        <br>
+        <textarea name="explanation" style="width:200px;height:60px;"></textarea>
+        <br>
+        <input type="submit" value="更改说明">
+    </form>
+    <h2 th:utext="${msg4}"></h2>
+</div>
+</body>
+</html>
