@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>查看全部记录</title>
+</head>
+<body>
+<form action="/login">
+<table  style="margin-top:10px;margin-left:20px;" border="1">
+    <thead>
+    <tr>
+        <th>序号</th>
+        <th>知识点</th>
+        <th>详细说明</th>
+    </tr>
+
+    <tr th:each="User:${userList}" style="text-align:center;vertical-align:middle;">
+        <td th:text="${User.ID}"></td>
+        <td th:text="${User.point}"></td>
+        <td th:text="${User.explanation}"></td>
+    </tr>
+    </thead>
+</table>
+
+<br>
+<input style="margin-left:200px" type="submit" value="返回" >
+</form>
+</body>
+</html>
