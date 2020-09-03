@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>查看全部记录</title>
+    <link rel="stylesheet" href="../static/css/me.css" th:href="@{/css/me.css}">
+</head>
+<body style="text-align:center">
+<form action="/select">
+<table  style="margin-top:10px;margin-left:20px;" border="1">
+    <thead>
+    <tr>
+        <th>序号</th>
+        <th>知识点</th>
+        <th>详细说明</th>
+    </tr>
+
+    <tr th:each="Info:${infoList}" style="text-align:center;vertical-align:middle;">
+        <td th:text="${Info.ID}"></td>
+        <td th:text="${Info.point}"></td>
+        <td th:text="${Info.explanation}"></td>
+    </tr>
+    </thead>
+</table>
+
+<br>
+<input type="submit" value="返回" style="background:lightcoral;width:100px;height:40px;font-size:20px;" >
+</form>
+</body>
+</html>

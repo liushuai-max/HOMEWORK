@@ -1,22 +1,24 @@
 package com.example.management.mapper;
 
+
 import com.example.management.model.User;
 import org.apache.ibatis.annotations.*;
 
-import java.util.List;
-
 @Mapper
 public interface UserMapper {
-    @Insert("insert into user (point,explanation) values (#{point},#{explanation})")
+    @Insert("insert into user (username,password) values (#{username},#{password})")
     void adduser(User user);
-    @Select("select * from user where point=#{point}")
-    User getuser(String point);
-    @Select("select * from user where point=#{point}")
-    User login(String point,String explanation);
-    @Delete("delete from user where point=#{point}")
-    void deleteuser(String point);
-    @Update("update user set explanation=#{explanation} where point=#{point}")
-    void updateuser(String point,String explanation);
-    @Select("select * from user")
-    List<User> getallusers();
+
+    @Select("select * from user where username=#{username}")
+    User getuser(String username);
+
+    @Select("select * from user where username=#{username} and password=#{password}")
+    User userlogin(String username, String password);
+
+    @Delete("delete from user where username=#{username}")
+    void deleteuser(String username);
+
+    @Update("update user set password=#{password} where username=#{username}")
+    void updateuser(String username,String password);
+
 }

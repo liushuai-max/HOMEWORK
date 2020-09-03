@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>知识点查看</title>
+    <link rel="stylesheet" href="../static/css/me.css" th:href="@{../css/me.css}">
 </head>
 <body style="text-align:center">
 <br>
-<h2>知识点查看页面</h2>
+<h2>知识点管理页面</h2>
 <div>
     <br>
     <form action="/login" method="post">
@@ -19,7 +20,7 @@
 </div>
 <div>
     <br>
-    <form action="/deleteuser" method="post">
+    <form action="/deleteinfo" method="post">
         <label for="">知识点</label>
         <input type="text" name="point">
 
@@ -30,7 +31,7 @@
 
 <div>
     <br>
-    <form action="/updateuser" method="post">
+    <form action="/updateinfo" method="post">
         <label for="">知识点</label>
         <br>
         <input type="text" name="point">
@@ -45,8 +46,8 @@
 </div>
 <div>
     <br>
-    <form action="/getallusers" method="post">
-    <input type="submit" value="查看全部记录">
+    <form action="/select" method="post">
+        <input type="submit" value="返回">
     </form>
 </div>
 </body>

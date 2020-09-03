@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>管理页面</title>
+    <link rel="stylesheet" href="../static/css/me.css" th:href="@{../css/me.css}">
+</head>
+<body style="text-align:center" >
+<br>
+<h2>欢迎进入数据结构知识点管理页面，请选择您要执行的操作</h2>
+
+<div>
+    <br><br>
+    <form action="/add_info">
+        <input type="submit" value="添加知识点" style="background:aliceblue;width:150px;height:40px;font-size:20px;">
+    </form>
+</div>
+<div>
+    <br><br>
+    <form action="/login">
+        <input type="submit" value="管理知识点" style="background:aliceblue;width:150px;height:40px;font-size:20px;">
+    </form>
+</div>
+<div>
+    <br><br>
+    <form action="/getallinfo">
+        <input type="submit" value="查看全部记录" style="background:aliceblue;width:150px;height:40px;font-size:20px;">
+    </form>
+</div>
+
+<div >
+    <br><br>
+    <form action="/deleteuser">
+        <input type="submit" value="删除账户" style="background:#ff0000;width:100px;height:40px;font-size:20px;">
+    </form>
+</div>
+
+<div >
+    <br><br>
+    <form action="/userlogin">
+        <input type="submit" value="注销" style="background:indianred;width:100px;height:40px;font-size:20px;">
+    </form>
+</div>
+</body>
+</html>
